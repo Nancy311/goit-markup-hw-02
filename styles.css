@@ -1,0 +1,24 @@
+.body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    ;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 1);
+    width: 1600px;
+    height: 80px;
+    border: 1px;
+}
+
+.header-list {
+    Width: 281px;
+    Height: 16px;
+    Top: 32px Left:453px;
+    text: indent 453px;
+}
+
+.list-item {}
