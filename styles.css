@@ -1,24 +1,29 @@
+:root{
+    --primary-text-color:rgb(33,33,33);
+    --accent-color: rgba(33, 150, 243, 1);
+}
+
 .body {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 14px;
     color: rgb(33, 33, 33);
-    ;
+    background-color: rgba(255, 255, 255, 1);
 }
+
+/*шапка*/
 
 .header {
    
     width: 1600px;
     height: 80px;
-    border: 1px;
-    border-top: 1px solid rgba(255, 255, 255, 1);
-   background-color: rgba(236, 236, 236, 1); 
+    border: 1px solid rgba(236, 236, 236, 1);
+  
    margin:32 px,215px;
 }
 
 
-}
 .header-list {
     display: flex;
     justify-content: space-between;
@@ -27,11 +32,23 @@
     margin-left:  453px;
     margin-right:  866px;
     list-style: none;
-    
-}  
+     
+  
+    }  
 
-.list-item:hover{
-    color:rgba (33, 150, 243, 1)}
+.header-list a{
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+
+}
+
+.header-list .list-item .current{
+
+    color:rgba(33, 150, 243, 1);
+}
+
+ .list-item:hover, .header-list .list-item:focus{
+    color:rgba(33, 150, 243, 1);}
 
 .header-logo {
     width: 145px;
@@ -40,25 +57,36 @@
     font-family:"Raleway", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
-        font-style: normal;;
-         font-family: "Oleo Script", system-ui;
-  font-weight: 400;
-  font-style: normal;
+        font-style: normal;
+        font-size: 26px;
+   line-height: 30.52px;
+  color: rgba(33, 150, 243, 1);  
+}
+
+.logo-second{
+color: rgba(0, 0, 0, 1);
+}
 
 
 .mail{ 
-width: 135px;
-    height: 16px;
-    margin: 32px,387px,32px,1078px
+
+padding: 32px,387px,32px,1078px;
+    color: rgba(117, 117, 117, 1);
  
 
 }
+.mail:hover{
+    rgba(33, 150, 243, 1);
+}
 
-.tel{
+    .tel{
+       color: rgba(117, 117, 117, 1);
 
 }
 
-
+.tel:hover {
+    rgba(33, 150, 243, 1);
+}
 
 
 
