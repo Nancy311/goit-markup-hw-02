@@ -5,18 +5,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +21,9 @@
 
   <body class="body">
     <header class="header">
+
+<section class="container main-nav">
+
       <div class="header-logo">
         <a href="https://google.com" class="header-logo-link-1"
           ><span class="logo">Web</span><span class="header-logo-link-1">Studio</span></a
@@ -34,20 +32,30 @@
 
       <nav class="header-nav">
         <ul class="header-list">
-          <li><a href="" class="list-item current">Студія</a></li>
-          <li><a href="./portfolio.html" class="list-item">Портфоліо</a></li>
-          <li><a href="#contacts" class="list-item">Контакти</a></li>
+          <li class="header-list-item"><a href="" class="list-item current">Студія</a></li>
+          <li class="header-list-item">
+            <a href="./portfolio.html" class="list-item">Портфоліо</a>
+          </li>
+          <li class="header-list-item"><a href="#contacts" class="list-item">Контакти</a></li>
         </ul>
       </nav>
 
-      <div><a href="info@devstudio.com" class="mail">info@devstudio.com</a></div>
-      <div><a href="tel:+380961111111" class="tel">+38 (096) 111-11-11</a></div>
-    </header>
+      <ul class="contacts-list">
+  
+        <li class="contacts-list-item"><a href="info@devstudio.com" class="mail">info@devstudio.com</a></li>
+        <li class="contacts-list-item"><a href="tel:+380961111111" class="tel">+38 (096) 111-11-11</a></li>
+      </ul>
+      <!-- <div><a href="info@devstudio.com" class="mail">info@devstudio.com</a></div>
+      <div><a href="tel:+380961111111" class="tel">+38 (096) 111-11-11</a></div> -->
+    </section>
+  </header>
 
     <main>
       <section class="main">
-        <h1 class="tittle">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <div class="container">
+          <h1 class="tittle">Ефективні рішення для вашого бізнесу</h1>
+          <button type="button" class="button">Замовити послугу</button>
+        </div>
       </section>
 
       <section class="features">
@@ -83,56 +91,82 @@
 
       <section class="about">
         <div class="container">
-          <h2>Чем мы занимаемся</h2>
-          <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
-            <img src="./images/photo1.jpg" alt="Печать на клавиатуре" width="370" />
-          </a>
-          <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
-            <img src="./images/photo2.jpg" alt="Телефон в руках" width="370" /> </a
-          ><a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
-            <img src="./images/photo3.jpg" alt="Таблица оттенков в руках" width="370" />
-          </a>
+          <h2 class="about-title">Чим ми займаємось</h2>
+          <ul class="about-list">
+            <li>
+              <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
+                <img src="./images/photo1.jpg" alt="Печать на клавиатуре" width="370" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
+                <img src="./images/photo2.jpg" alt="Телефон в руках" width="370" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
+                <img src="./images/photo3.jpg" alt="Таблица оттенков в руках" width="370" />
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="team">
         <div class="container">
-          <h2>Наша команда</h2>
+          <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
-            <li class="team-item">
-              <img src="./images/team1.jpg" alt="Дизайнер" width="270" />
-              <h3>Игорь Демьяненко</h3>
-              <p lang="en">Product Designer</p>
-            </li>
-            <li class="team-item">
-              <img src="./images/team2.jpg" alt="Розработчик" width="270" />
-              <h3>Ольга Репина</h3>
-              <p lang="en">Frontend Developer</p>
-            </li>
-            <li class="team-item">
-              <img src="./images/team3.jpg" alt="Маркетолог" width="270" />
-              <h3>Николай Тарасов</h3>
-              <p lang="en">Marketing</p>
-            </li>
-            <li class="team-item">
-              <img src="./images/team4.jpg" alt="Дизайнер" width="270" />
-              <h3>Михаил Ермаков</h3>
-              <p lang="en">UI Designer</p>
-            </li>
+            <div class="team-card">
+              <li class="team-item">
+                <img src="./images/team1.jpg" alt="Дизайнер" width="270" />
+                <h3>Игорь Демьяненко</h3>
+                <p lang="en">Product Designer</p>
+              </li>
+            </div>
+            <div class="team-card">
+              <li class="team-item">
+                <img src="./images/team2.jpg" alt="Розработчик" width="270" />
+                <h3>Ольга Репина</h3>
+                <p lang="en">Frontend Developer</p>
+              </li>
+            </div>
+            <div class="team-card">
+              <li class="team-item">
+                <img src="./images/team3.jpg" alt="Маркетолог" width="270" />
+                <h3>Николай Тарасов</h3>
+                <p lang="en">Marketing</p>
+              </li>
+            </div>
+
+            <div class="team-card">
+              <li class="team-item">
+                <img src="./images/team4.jpg" alt="Дизайнер" width="270" />
+                <h3>Михаил Ермаков</h3>
+                <p lang="en">UI Designer</p>
+              </li>
+            </div>
           </ul>
         </div>
       </section>
     </main>
 
-    <footer id="contacts">
-      <a href="https://google.com">Логотип</a>
+    <footer id="contacts" class="footer">
+      <div class="footer-logo">
+        <a href="https://google.com" class="footer-logo-link-1"
+          ><span class="logo">Web</span><span class="footer-logo-link-1">Studio</span></a
+        >
+      </div>
 
-      <address>
-        <ul>
-          <li lang="ua"><a href=""> м. Київ, Бульвар Лесі Українки,б. 26, </a></li>
-          <li><a href="mailto:mango@mail.pig">mango@mail.pig</a></li>
-          <li><a href="tel:+1112223344">(111) 222-33-44</a></li>
-        </ul>
+      <address class="adress">
+        <div class="container">
+          <ul class="adress-list">
+            <li>
+              <a href="" class="adress-list-item-place"> м. Київ, Бульвар Лесі Українки,б. 26, </a>
+            </li>
+            <li><a href="mailto:mango@mail.pig" class="adress-list-item">info@example.com</a></li>
+            <li><a href="tel:+1112223344" class="adress-list-item">+38 096 111 11 11</a></li>
+          </ul>
+        </div>
       </address>
     </footer>
   </body>

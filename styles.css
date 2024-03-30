@@ -1,21 +1,23 @@
-
-
 :root {
   --primary-text-color: rgb(33, 33, 33);
   --accent-color: rgba(33, 150, 243, 1);
 }
 
-.body {
+body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
-  color: rgb(33, 33, 33);
+  color: var(--primary-text-color);
   background-color: rgba(255, 255, 255, 1);
+  letter-spacing: 0.03em;
 }
 
 ul {
   list-style: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 /* Контейнер */
@@ -25,6 +27,9 @@ ul {
   margin-right: 215px;
   margin-bottom: 95px;
   max-width: 1170px;
+  outline: 3px solid sandybrown;
+  /* align-content: center;
+  padding: 15px делает репета и тогда ставит ширину видз 1200рх*/
 }
 
 /*шапка*/
@@ -33,114 +38,144 @@ ul {
   max-width: 100%;
   height: 80px;
   border: 1px solid rgba(236, 236, 236, 1);
+}
+
+/* main-nav */
+
+.main-nav {
   display: flex;
   align-items: center;
 }
 
 .header-list {
-  display: flex;
-  justify-content: center;
+  display: flex; /*ok */
   align-items: center;
   width: 281px;
   height: 16px;
-  margin-left: 93px;
+  margin-left: 93px; /*ok*/
   margin-top: 32px;
-  list-style: none;
-  gap: 50px;
+  margin-bottom: 32px;
 }
 
-.header-list a {
+.header-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.list-item {
+  /* у строчных элементов не работает вертикальная геометрияЮ поэтому дисплей блок для ссылок делаем 
+  тогда ссылка раздвигает ли и можно паддинг добавить , будет больше площадь куда нажать*/
+  display: block;
   color: rgb(33, 33, 33);
   text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* это необязательно */
 }
 
-.header-list .list-item .current {
-  color: rgba(33, 150, 243, 1);
+.header-list .list-item.current {
+  color: var(--accent-color);
 }
 
 .list-item:hover,
 .header-list .list-item:focus {
-  color: rgba(33, 150, 243, 1);
-}
-
-.header-logo {
-  margin-left: 215px;
-  /* margin-bottom: 25px; */
-  /* margin-top: 25px; */
+  color: var(--accent-color);
 }
 
 .header-logo-link-1 {
-  width: 145px;
-  height: 31px;
+  /* width: 145px;
+  height: 31px; */
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 26px;
-  line-height: 30.52px;
+  line-height: 1.17;
+  text-decoration: none;
 }
 .logo {
-  color: rgba(33, 150, 243, 1);
+  color: var(--accent-color);
 }
 
 .header-logo-link-1 {
   color: rgba(0, 0, 0, 1);
 }
 
-.mail {
-  margin-left: 344px;
-  margin-top: 32px;
-  color: rgba(117, 117, 117, 1);
-}
-.mail:hover {
-  color: rgba(33, 150, 243, 1);
+.contacts-list {
+  display: flex;
+  margin-left: auto; /*прижимает вправо до концф контейнера*/
 }
 
+.contacts-list-item:hover,
+.contacts-list-item:focus {
+  color: var(--accnt-color);
+}
+
+.contacts-list-item + .contacts-list-item {
+  margin-left: 40px;
+}
+
+.mail,
 .tel {
-  margin-left: 50px;
   color: rgba(117, 117, 117, 1);
+  text-decoration: none;
 }
 
-.tel:hover {
-  color: rgba(33, 150, 243, 1);
+.mail:hover,
+.tel:focus,
+.tel:hover .mail:focus {
+  color: var(--accent-color);
 }
 
 /*Перший блок*/
 
-.main {
+/* .main {
   display: block;
   height: 600px;
   padding-top: 200px;
   background-color: rgba(47, 48, 58, 1);
+} */
+
+.main {
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: rgba(47, 48, 58, 1);
 }
 
 .tittle {
-  width: 696px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-bottom: 30px;
   height: 120px;
-  border: 2px dashed #2196f3;
-  margin-left: 452px;
   font-size: 44px;
   font-weight: 900;
   text-align: center;
-  line-height: 60px;
+  padding-left: 237px;
+  padding-right: 237px;
+  line-height: 1.36;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 1);
+  background-color: teal;
 }
 
 .button {
-  width: 216px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-left: 485px;
+  min-width: 200px;
   height: 50px;
   border-radius: 4px;
-  margin-left: 692px;
-  margin-bottom: 280px;
-  background: rgba(33, 150, 243, 1);
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.06em;
+  background: var(--accent-color);
   color: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  /* add padding?
+  transparent border not obligatory
+  display inline block
+  это у нас не ссылка поэтому не нужно инлайн и паддинг */
 }
 
 /* Features*/
@@ -154,4 +189,222 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  outline: 3px solid tomato;
+}
+
+.features-subtitle {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/*About*/
+
+.about-title,
+.team-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.about-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.team {
+  height: 648px;
+  padding-top: 94px;
+  background-color: #f5f4fa;
+}
+
+.team-card {
+  width: 270px;
+  height: 368px;
+  border-radius: 0px, 0px, 4px, 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.team-item > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: #757575;
+}
+
+.team-item > h3 {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+}
+
+/* Footer */
+
+.footer {
+  height: 252px;
+  background: #2f303a;
+}
+
+.footer-logo {
+  margin-left: 215px;
+  padding-top: 60px;
+  /* margin-bottom: 25px; */
+  /* margin-top: 25px; */
+}
+
+.footer-logo-link-1 {
+  width: 145px;
+  height: 31px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1.17;
+}
+.logo {
+  color: var(--accent-color);
+}
+
+.footer-logo-link-1 {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.adress-list {
+  margin-top: 28px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.adress-list-item {
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-decoration: none;
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.adress-list-item-place {
+  color: #ffffff;
+  padding-bottom: 9px;
+  text-decoration: none;
+  gap: 12px;
+}
+
+/*------------------------------------------------------------ Portfolio -------------------------------*/
+
+/* Button section */
+.button-list {
+  display: flex;
+  margin-top: 94px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-list-item {
+  height: 38px;
+  border-radius: 4px;
+  background: var(--accent-color);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.button-list-item:hover,
+.button-list-item:focus {
+  background-color: var(--accent-color);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Portfolio List Section */
+
+.button-list{
+  margin-bottom: 34px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* gap: 30px; */
+}
+
+.portfolio-list-item {
+  height: 404px;
+  width: 370px;
+  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: tomato;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-list-item:nth-child(3n){
+margin-right: 0;
+}
+
+.portfolio-list-item:nth-last-child(-n + 3){
+margin-bottom: 0;
+} /*last 3 elements если у четырех последних убрать то плс 4*/
+
+
+/* Альтернатива если меняется ширина контейнера и на разных устройствах
+
+.portfolio-list-item {
+
+  width: calc((100%-60px)/3); от 100% отнимаем два зазора по 30 рх то есть маржина и делим на количство элементов в строке
+  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: tomato;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+
+.portfolio-list-item:nth-child(3n){
+margin-right: 0;
+} */
+
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgba(117, 117, 117, 1);
 }
